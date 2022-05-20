@@ -1,0 +1,13 @@
+.card-container {
+    /* background-color: brown; */
+    /* border: 2px dashed cornflowerblue; */
+    max-width: fit-content;
+    text-align: center;
+    margin-left: 2vw;
+}
+.card-container {
+    opacity: 0.8;
+}
+.card-container:hover, .card-container:focus {
+    opacity: 1;
+}
