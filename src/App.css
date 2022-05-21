@@ -1,4 +1,10 @@
+/** @format */
+
 .all-cards-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.App {
+  margin-left: 2vw;
 }

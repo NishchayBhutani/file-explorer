@@ -1,7 +1,7 @@
 /** @format */
 
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Card from "./Components/Card";
 import AddCard from "./Components/AddCard";
 function App() {
@@ -18,7 +18,7 @@ function App() {
         {
           name: "drama",
           type: "folder",
-          sub: [{ name: "m.pdf", type: "file" }],
+          sub: [{ name: "mov.mp4", type: "file" }],
         },
       ],
     },
@@ -27,16 +27,29 @@ function App() {
       type: "folder",
       sub: [
         {
-          name: "fps",
-          type: "folder",
-          sub: [],
+          name: "pacman.exe",
+          type: "file",
         },
       ],
     },
+    
   ]);
+  const renameHandler = (originalName, val) => {
+    arr.map((elem, idx) => {
+      if (elem.name === originalName) {
+        let originalArr = [...arr];
+        let modElem = { name: val, type: elem.type, sub: elem.sub };
+        originalArr[idx] = modElem;
+        setArr(originalArr);
+      }
+    });
+  }; // rename file/folder
+  const deleteHandler = (val) => {
+    let modArr = arr.filter((elem) => elem.name !== val);
+    setArr(modArr);
+  }; // delete file/folder
   return (
     <div className='App'>
-      <h1>Welcome!</h1>
       <div className='all-cards-container'>
         {arr.map((elem) => {
           return (
@@ -44,8 +57,9 @@ function App() {
               val={elem}
               onMod={(val) => {
                 setArr(val);
-                console.log(arr);
               }}
+              onRename={renameHandler}
+              onDelete={deleteHandler}
             />
           );
         })}
@@ -53,7 +67,7 @@ function App() {
           currArr={arr}
           onChange={(val, type) => {
             setArr([...arr, { name: val, type: type, sub: [] }]);
-          }}
+          }} 
         />
       </div>
     </div>

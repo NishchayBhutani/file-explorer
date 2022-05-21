@@ -1,35 +1,48 @@
+/** @format */
+
 .add-new-container {
-    margin-left: 3vw;
+  margin-left: 2vw;
+  margin-top: 1vh;
 }
 .add-image {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 .add-image:hover {
-    opacity: 1;
+  opacity: 1;
 }
 .create-file-modal {
-    width: 50%;
-    justify-content: center;
-    position: 'absolute';
-      margin: auto;
-      /* align-items: center; */
-      border: '1px solid #ccc';
-      background: '#fff';
-      overflow: 'auto';
-      outline: 'none';
-      padding: 20px;
-      margin-top: 10vh;
-      background-color: rgb(230, 232, 213);
+  width: 50%;
+  margin: auto;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  outline: none;
+  padding: 20px;
+  margin-top: 10vh;
+  background-color: rgb(230, 232, 213);
 }
 .modal-content-container {
-    background-color: aqua;
-    width: 50%;
-    margin: 0 auto;
-    
+  width: 50%;
+  margin: 0 auto;
+  align-items: center;
 }
-.modal-close-image-container{
-    /* margin-left: 100px; */
-    position: absolute;
-    top: 0px;
-    right: 0px;
+.modal-close-image-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.loader-style {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+.file-cancel-button {
+  margin-left: 1vw;
+}
+.file-name-input {
+  border: none;
+  border-radius: 5%;
+  height: 4vh;
 }

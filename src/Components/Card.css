@@ -1,14 +1,51 @@
+/** @format */
+
 .card-container {
-    max-width: fit-content;
-    text-align: center;
-    margin-left: 3vw;
+  border: 2px solid transparent;
+  width: 5vw;
+  max-width: 5vw;
+  height: 16vh;
+  max-height: 16vh;
+  text-align: center;
+  margin-left: 2vw;
+  margin-top: 2vh;
+  word-wrap: break-word;
 }
 .card-container {
-    opacity: 0.8;
+  opacity: 0.8;
 }
-.card-container:hover, .card-container:focus {
-    opacity: 1;
+.card-container:hover,
+.card-container:focus {
+  opacity: 1;
 }
-.folder-file-image{
-    height: 7vh;
+.folder-file-image {
+  height: 7vh;
+}
+.rename-modal {
+  width: 50%;
+  justify-content: center;
+  position: "absolute";
+  margin: auto;
+  border: "1px solid #ccc";
+  background: "#fff";
+  overflow: "auto";
+  outline: "none";
+  padding: 20px;
+  margin-top: 10vh;
+  background-color: rgb(230, 232, 213);
+}
+.rename-modal-content-container {
+  width: 50%;
+  margin: 0 auto;
+}
+.name-container {
+  margin-top: -3vh;
+}
+
+.rename-button {
+  margin-top: 1vh;
+}
+.cancel-rename-button {
+  margin-left: 1vw;
+  margin-top: 1vh;
 }
